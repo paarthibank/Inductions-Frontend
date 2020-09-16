@@ -1,0 +1,103 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style type="text/css">
+	.col-lg-2{
+		display: inline-block;
+		height: 673px;
+		background-color: rgb(100,100,100);
+		color: white;
+	}
+	.col{
+		display: inline-block;
+		height: 673px;
+
+	}
+	
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2">
+			
+			<div class="input-group mb-3" style="margin-top: 50px;">
+			  
+			  <input type="file" placeholder="Y Value" id="file">
+			</div>
+
+			
+			<div class="input-group mb-3">
+				<h6>Font Size and family</h6><br>
+			  
+			  <input type="text" placeholder="Eg:20pt Sans-serif" id="font">
+			</div>
+			
+			 <div class="form-group form-check">
+			    <input type="checkbox" class="form-check-input" id="exampleCheck1" id="fill" value="fill">
+			    <label class="form-check-label" for="exampleCheck1" >Fill Text</label>
+			  </div>
+			<div class="input-group mb-3">
+			  
+			  <input type="text" placeholder="Text" id="text">
+			</div>
+			<input type="color" id="color"><br><br><br>
+			<button id="download" class="btn btn-primary" style="width: 100%">Download</button>
+
+		</div>
+		<div class="col" id="can" style="margin: 0px; padding: 0px" ><canvas id="canvas" width="1100px" height="670px"></canvas></div>
+	</div>
+</div>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");	
+	var cvs=canvas.getContext("2d");
+	var file=document.getElementById("file");
+
+
+	file.addEventListener("change",function(event){
+		var img=new Image();
+		url=URL.createObjectURL(event.target.files[0]);
+		img.src = URL.createObjectURL(event.target.files[0]);
+
+		
+		img.onload=function(){
+			cvs.drawImage(img,0,0);
+			cvs.save();
+
+		}
+
+
+		
+		
+
+		
+	},false)
+	
+	canvas.addEventListener("click",function(eve){
+		cvs.font=document.getElementById("font").value;
+		cvs.strokeStyle=document.getElementById("color").value;
+		cvs.textAlign="center";
+		var text=document.getElementById("text").value;
+		cvs.strokeText(text, eve.pageX-258, eve.pageY);
+		var n1=document.getElementById("can");
+
+
+	})
+	function so(){
+		cvs.clearRect(0,0,1100,670);
+		
+		
+	}
+
+	var button = document.getElementById('download');
+	button.addEventListener("click",function(){
+		var down=document.createElement("a");
+		var image = canvas.toDataURL("image/png");
+		down.download = "my-image.png";
+		down.href = image;
+		down.click();
+	})
+	
+	
+</script>
+</body></html>
