@@ -33,12 +33,14 @@
 			  <input type="text" placeholder="Eg:20pt Sans-serif" id="font">
 			</div>
 			
+			
 			<div class="input-group mb-3">
 			  
 			  <input type="text" placeholder="Text" id="text">
 			</div>
 			<input type="color" id="color"><br><br><br>
-			<button id="download" class="btn btn-primary" style="width: 100%">Download</button>
+			<button id="download" class="btn btn-primary" style="width: 100%">Download</button><br><br><br>
+			<button onclick="so()" 	class="btn btn-primary" style="width: 100%">Back</button>
 
 		</div>
 		<div class="col" id="can" style="margin: 0px; padding: 0px" ><canvas id="canvas" width="1100px" height="670px"></canvas></div>
@@ -48,6 +50,7 @@
 	var canvas = document.getElementById("canvas");	
 	var cvs=canvas.getContext("2d");
 	var file=document.getElementById("file");
+	var img;
 
 
 	file.addEventListener("change",function(event){
@@ -58,8 +61,6 @@
 		
 		img.onload=function(){
 			cvs.drawImage(img,0,0);
-			cvs.save();
-
 		}
 
 
@@ -70,22 +71,26 @@
 	},false)
 	
 	canvas.addEventListener("click",function(eve){
+
 		cvs.font=document.getElementById("font").value;
+		console.log(document.getElementById("font").value);
+		img=cvs.getImageData(0,0,1100,670);
 		cvs.strokeStyle=document.getElementById("color").value;
 		cvs.textAlign="center";
 		var text=document.getElementById("text").value;
 		cvs.strokeText(text, eve.pageX-258, eve.pageY);
-		var n1=document.getElementById("can");
-
+		
 
 	})
 	function so(){
-		cvs.clearRect(0,0,1100,670);
-		
+		cvs.clearRect(0,0,1000,1000);
+		cvs.putImageData(img,0,0);
 		
 	}
 
 	var button = document.getElementById('download');
+
+	
 	button.addEventListener("click",function(){
 		var down=document.createElement("a");
 		var image = canvas.toDataURL("image/png");
