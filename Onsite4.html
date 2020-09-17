@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+<meta http-equiv="Access-Control-Allow-Origin" content="*"></head>
+<body>
+
+	<div class="container-fluid a">
+		
+	</div>
+		
+			
+			
+		
+	</div>
+	<div class="container-fluid b" id="c"> 
+		
+		<div class="form-group">
+		    <label for="exampleFormControlTextarea1">Enter text for grammar check </label>
+		    <textarea class="form-control" id="grammar" rows="5" onkeydown="so()"></textarea>
+		  </div>
+		  <br><br>
+
+		
+		
+	</div>
+
+	<script type="text/javascript">
+
+
+	fetch("https://api.textgears.com/check.php?text=I+is+am+engeneer!&key=kgBdLsqsyRfBUdso")
+		.then(response => {
+			var text=response.json();
+			console.log(text);
+		})
+		.catch(err => {
+			alert(err);
+		});
+	</script>
+
+
+</body>
+

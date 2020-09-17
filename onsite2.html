@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style type="text/css">
+	.col-lg-2{
+		display: inline-block;
+		height: 670px;
+		background-color: rgb(100,100,100);
+		color: white;
+	}
+	
+</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2">
+			<div class="input-group mb-3" style="width: 100%;margin-top: 50px;">
+			  
+			  <input type="number" placeholder="X Value" id="x" >
+			</div>
+			<div class="input-group mb-3">
+			  
+			  <input type="number" placeholder="Y Value" id="y">
+			</div>
+			<button type="button" onclick="s()" id="btn" class="btn btn-primary" style="width: 100%">Plot</button>
+
+			<div class="input-group mb-3" style="width: 100%;margin-top: 50px;">
+			  
+			  <input type="number" placeholder="Slope" id="slope" >
+			</div>
+			<div class="input-group mb-3">
+			  
+			  <input type="number" placeholder="Constant" id="const">
+			</div>
+
+			<button type="button" onclick="so()" id="btn" class="btn btn-primary" style="width: 100%">Plot</button>
+
+		</div>
+		<div class="col"><canvas id="canvas" width="1100px" height="670px"></canvas></div>
+	</div>
+</div>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+
+	
+	var cvs=canvas.getContext("2d");
+
+	cvs.moveTo(0,330);
+	cvs.lineTo(1100,330);
+	cvs.stroke();
+
+	cvs.moveTo(550,0);
+	cvs.lineTo(550,660);
+	cvs.stroke();
+	var x=0,y=0;
+	function s(){
+		var x1=document.getElementById("x").value;
+		var y1=document.getElementById("y").value;		
+		cvs.moveTo(x+550,330-y);
+		var n=parseInt(x1)+550;
+		cvs.lineTo(n,330-y1);
+		cvs.stroke();
+		x=parseInt(x1);
+		y=parseInt(y1);
+
+
+	}
+
+	
+</script>
+</body>
+</html>
