@@ -1,0 +1,684 @@
+<html>
+<head>
+<title>
+Test for ur checking speed
+</title>
+<meta charset="utf-8">
+<style>
+h1{
+font-size: 50px;
+}
+.themainbox{
+
+float: left;
+height: 100%;
+padding: 50px; 
+background-color: aliceblue;
+width: 20%;
+
+}
+	
+.themainbox2{
+
+
+height: 100%;
+padding-left: 250px;
+
+padding-left:250px;
+padding-bottom: 100px;
+background-color: slateblue;
+
+text-align: center;
+font-size: 100px;
+text-align: center;
+}
+
+	
+.random{
+float: left;
+width: 70%;
+font-size: 30px;
+
+}
+
+.buttons{
+ 
+
+width: 500px;
+text-align: center;
+margin: auto;
+
+
+
+
+
+}
+.timer
+{
+
+
+font-size: 30px;
+}
+.number{
+  background-color:green;
+  float: left;
+  width: 20%;
+  position: relative;
+  height: 100px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  color: pink;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  
+  }
+
+
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=number], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.res1{
+font-size: 30px;
+
+}
+.but {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+@media only screen and (max-device-width: 600px)  {
+.themainbox{
+
+padding-top: 0px;
+padding-bottom: 0px;
+height: 20%;
+float: none;
+background-color: aliceblue;
+width: 100%;
+
+}
+	
+.themainbox2{
+
+width: 100%;
+height: 80%;
+
+padding-left: 50px;
+padding-top: 30px;
+background-color: slateblue;
+font-size:50px;
+text-align: center;
+
+
+}
+form{
+float: left;
+height: 100%;
+
+margin-top: 5px;
+width: 30%;
+font-size: 30px;
+}
+input[type=text], select {
+  padding: 4px;
+  font-size:10px;
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 1px;
+ height: 20%;
+}
+input[type=number], select {
+  padding: 4px;
+  font-size:10px;
+  margin-top: 5px;
+  display: inline-block;
+  border: 1px solid lightgray;
+  border-radius: 1px;
+  height: 20%;
+ 
+}
+.but {
+	float: left;
+	height: 100%;
+  width: 15%;
+  background-color: black;
+  color: white;
+  padding: 2.8px 4px;
+  margin-left: 20px;
+  margin-top: 0px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.random{
+margin-top:20px;
+margin-bottom:0px;
+
+
+height: 25%;
+width: 100%;
+font-size: 15px;
+
+}
+.ssp{
+float: left;
+width: 20%;
+height: 100%;
+text-align: center;
+}
+.timer
+{
+margin-top:0px;
+
+height: 50%;
+font-size: 20px;
+} 
+h1{
+font-size: 25px;
+}
+.buttons{
+ 
+margin-left: 20%;
+width: 500px;
+text-align: center;
+margin-left: 20%;
+position: relative;
+
+
+
+
+}
+.number{
+  background-color:green;
+  float: left;
+  width: 20%;
+  position: relative;
+  height: 75px;
+  border: 1px solid lightgrey;
+  border-radius: 20px;
+  color: pink;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  
+  }
+.toppers{
+ font-size: 10px;
+
+}
+.res1{
+font-size: 10px;
+
+
+}
+}
+</style>
+</head>
+<body>
+
+<div class="themainbox">
+<form id="form">
+<label for="name">NAME <br></label>
+<input type="text" id="name">
+<label for="rollno"><br>ROLL NO   </label>
+<input type="number" id="rollno">
+
+
+</form>
+<button class="but" onclick="st()" id="but">SUBMIT</button>
+<div class="ssp">
+<div class="random">YOUR TIMER : </div>
+<div class="timer" id="timer">0.00
+</div>
+</div>
+<div class="toppers">
+<div class="res1" id="top1">
+</div>
+<div class="res1" id="top2">
+</div>
+<div class="res1" id="top3">
+</div>
+<div class="res1" id="top4">
+</div>
+<div class="res1" id="top5">
+</div>
+</div>
+
+
+
+
+</div>
+<div class="themainbox2" id="themainbox2">	
+
+<h1>WELCOME</h1>
+<div class="dummy"></div>
+
+<div class="buttons">
+
+<button class="number" id="number" onclick="no()" onmousedown="bleep.play()">1</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()" disabled>15</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>2</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>11</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>18</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>21</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>24</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>5</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>6</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>19</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>4</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>23</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>8</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>13</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>10</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>7</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>17</button> 
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>12</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>22</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>14</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>3</button>
+
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>16</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>9</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>20</button>
+<button class="number" id="number1" onclick="no()"onmousedown="bleep.play()"disabled>25</button>
+<script>
+var bleep=new Audio();
+bleep.src="sound.mp3";
+</script>
+
+<script>
+var a2;
+for(a2=0;a2<26;a2++)
+{
+var f = document.getElementsByClassName("number")[a2].innerHTML;
+var v = parseInt(f);
+var a1 = 0.2+(0.03*v);
+document.getElementsByClassName("number")[a2].style.opacity = a1;
+}
+</script>
+<script>
+
+var timer=0;
+var increase=0;
+function timerstart()
+{
+
+timer = setInterval(mytime,10);
+function mytime(){
+
+increase +=1;
+document.getElementById("timer").innerHTML = increase/100;
+}
+}
+</script>
+<script>
+
+function no(){
+
+var n = document.getElementById("number").innerHTML;
+var y = parseInt(n);
+
+
+
+var x = document.getElementsByClassName("number");
+
+
+
+if (y<26)
+{
+document.getElementById("number").innerHTML = y + 25;
+var t;
+for(t=0;t<25;t++)
+{
+document.getElementsByClassName("number")[t].id="number1";
+if(document.getElementsByClassName("number")[t].innerHTML==y+1)
+{
+document.getElementsByClassName("number")[t].id="number";
+break;}
+}
+var i;
+var k=t+1;
+
+for(i=0;i<t;i++)
+{
+x[i].disabled=true;
+}
+
+x[t].disabled=false;
+
+for(i=k;i<26;i++)
+{
+x[i].disabled=true;
+}
+ 
+}
+else if(y==50)
+{
+clearInterval(timer);
+document.getElementById("number").innerHTML="";
+var n=myFunction();
+var p=document.getElementById("timer").innerHTML;
+
+
+document.getElementById("themainbox2").innerHTML="YOU HAVE COMPLETED THE WORK SUCCESSFULLY AND YOUR TIME IS :"+p;
+ 
+ 
+ 
+ 
+ 
+}
+
+else
+{
+document.getElementById("number").innerHTML="";
+var t;
+for(t=0;t<25;t++)
+{document.getElementsByClassName("number")[t].id="number1";
+if(document.getElementsByClassName("number")[t].innerHTML==y+1)
+{
+document.getElementsByClassName("number")[t].id="number";
+break;}
+}
+var i;
+var k=t+1;
+
+for(i=0;i<t;i++)
+{
+x[i].disabled=true;
+}
+x[t].disabled=false;
+
+for(i=k;i<26;i++)
+{
+x[i].disabled=true;
+}
+
+
+ 
+}
+
+
+}
+
+</script>
+
+
+
+
+
+
+
+<script>
+
+
+
+</script>
+
+
+
+
+</div>
+
+
+</div>
+<script>
+var old=document.getElementById("themainbox2").innerHTML;
+document.getElementById("themainbox2").innerHTML="";
+function st(){
+if(document.getElementById("name").value==0)
+{document.getElementById("themainbox2").innerHTML="Error No Name";}
+else
+{var ne=5;
+document.getElementById("but").disabled=true;
+var nee=setInterval(fun321,1000)
+function fun321(){
+if(ne>-1)
+{document.getElementById("themainbox2").innerHTML=ne;
+ne--;
+}
+else
+{clearInterval(nee);
+
+document.getElementById("themainbox2").innerHTML=old;
+var z=timerstart();
+
+var a=[0,1,2,3,4];
+
+     
+  var pos = [0,0,0,0,0];
+  var poss = [0,0,0,0,0];
+  var lll = [0,0,0,0,0];
+  var id = setInterval(frame, 50);
+  function frame() {
+	for(var i=0;i<5;i++)
+	{
+	lll[i]=500-(a[i]*100);
+    if (pos[i] == lll[i]) {
+    pos[i] = -a[i]*100;
+      
+    } else {
+      pos[i]++; 
+      document.getElementsByClassName("number")[a[i]].style.left = pos[i] + "px"; 
+    }
+	}
+	for(var i=5;i<10;i++)
+	{
+	
+	lll[i-5]=500-(a[i-5]*100);
+    if (poss[i-5] == -a[i-5]*100) {
+    poss[i-5] = lll[i-5];
+      
+    } else {
+      poss[i-5]--; 
+      document.getElementsByClassName("number")[i].style.left = poss[i-5] + "px"; 
+    }
+	}
+	
+	for(var i=10;i<15;i++)
+	{
+	lll[i-10]=500-(a[i-10]*100);
+    if (pos[i-10] == lll[i-10]) {
+    pos[i-10] = -a[i-10]*100;
+      
+    } else {
+      pos[i-10]++; 
+      document.getElementsByClassName("number")[i].style.left = pos[i-10] + "px"; 
+    }
+	}
+	for(var i=15;i<20;i++)
+	{
+	
+	lll[i-15]=500-(a[i-15]*100);
+    if (poss[i-15] == -a[i-15]*100) {
+    poss[i-15] = lll[i-15];
+      
+    } else {
+      poss[i-15]--; 
+      document.getElementsByClassName("number")[i].style.left = poss[i-15] + "px"; 
+    }
+	}
+	for(var i=20;i<25;i++)
+	{
+	lll[i-20]=500-(a[i-20]*100);
+    if (pos[i-20] == lll[i-20]) {
+    pos[i-20] = -a[i-20]*100;
+      
+    } else {
+      pos[i-20]++; 
+      document.getElementsByClassName("number")[i].style.left = pos[i-20] + "px"; 
+    }
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+  }
+  
+  
+  
+
+
+}
+}}
+
+
+}
+</script>
+<script>
+
+var x = [0,0,0,0,0];
+  var y = ["0","0","0","0","0"];
+function myFunction() {
+  
+  x[0] = document.getElementById("timer").innerHTML;
+  y[0] = document.getElementById("name").value;
+  
+  if(localStorage.getItem("topper1d")=="null"||localStorage.getItem("topper1d")==null)
+  {localStorage.setItem("topper1d",x[0]);
+  localStorage.setItem("topper1d n",y[0]);}
+  else if(localStorage.getItem("topper2d")=="null"||localStorage.getItem("topper2d")==null)
+  {localStorage.setItem("topper2d",x[0]);
+  localStorage.setItem("topper2d n",y[0]);}
+  else if(localStorage.getItem("topper3d")=="null"||localStorage.getItem("topper3d")==null)
+  {localStorage.setItem("topper3d",x[0]);
+  localStorage.setItem("topper3d n",y[0]);}
+  else if(localStorage.getItem("topper4d")=="null"||localStorage.getItem("topper4d")==null)
+  {localStorage.setItem("topper4d",x[0]);
+  localStorage.setItem("topper4d n",y[0]);}
+  else if(localStorage.getItem("topper5d")=="null"||localStorage.getItem("topper5d")==null||parseFloat(localStorage.getItem("topper5d"))>x[0])
+  {localStorage.setItem("topper5d",x[0]);
+  localStorage.setItem("topper5d n",y[0]);}
+  x[0]=localStorage.getItem("topper1d");
+  x[1]=localStorage.getItem("topper2d");
+  x[2]=localStorage.getItem("topper3d");
+  x[3]=localStorage.getItem("topper4d");
+  x[4]=localStorage.getItem("topper5d");
+  y[0]=localStorage.getItem("topper1d n");
+  y[1]=localStorage.getItem("topper2d n");
+  y[2]=localStorage.getItem("topper3d n");
+  y[3]=localStorage.getItem("topper4d n");
+  y[4]=localStorage.getItem("topper5d n");
+  for(var i=0;i<5;i++)
+  {
+	for(var j=i+1;j<5;j++)
+	{
+		if(parseFloat(x[i])>parseFloat(x[j]))
+		{
+			var num=x[i];
+			x[i]=x[j];
+			x[j]=num;
+			var nun=y[i];
+			y[i]=y[j];
+			y[j]=nun;
+			}}}
+	for(var i=0;i<5;i++)
+	{
+		localStorage.setItem("topper1d",x[0]);
+		localStorage.setItem("topper2d",x[1]);
+		localStorage.setItem("topper3d",x[2]);
+		localStorage.setItem("topper4d",x[3]);
+		localStorage.setItem("topper5d",x[4]);
+		localStorage.setItem("topper1d n",y[0]);
+		localStorage.setItem("topper2d n",y[1]);
+		localStorage.setItem("topper3d n",y[2]);
+		localStorage.setItem("topper4d n",y[3]);
+		localStorage.setItem("topper5d n",y[4]);
+	}
+  if(x[0]!=null&&x[0]!="null")
+  document.getElementById("top1").innerHTML = x[0]+" - "+y[0];
+  if(x[1]!=null&&x[1]!="null")
+  document.getElementById("top2").innerHTML = x[1]+" - "+y[1];
+  if(x[2]!=null&&x[2]!="null")
+  document.getElementById("top3").innerHTML = x[2]+" - "+y[2];
+  if(x[3]!=null&&x[3]!="null")
+  document.getElementById("top4").innerHTML = x[3]+" - "+y[3];
+  if(x[4]!=null&&x[4]!="null")
+  document.getElementById("top5").innerHTML = x[4]+" - "+y[4];
+	}
+  x[0]=localStorage.getItem("topper1d");
+  x[1]=localStorage.getItem("topper2d");
+  x[2]=localStorage.getItem("topper3d");
+  x[3]=localStorage.getItem("topper4d");
+  x[4]=localStorage.getItem("topper5d");
+  y[0]=localStorage.getItem("topper1d n");
+  y[1]=localStorage.getItem("topper2d n");
+  y[2]=localStorage.getItem("topper3d n");
+  y[3]=localStorage.getItem("topper4d n");
+  y[4]=localStorage.getItem("topper5d n");
+  for(var i=0;i<5;i++)
+  {
+	for(var j=i+1;j<5;j++)
+	{
+		if(parseFloat(x[i])>parseFloat(x[j]))
+		{
+			var num=x[i];
+			x[i]=x[j];
+			x[j]=num;
+			var nun=y[i];
+			y[i]=y[j];
+			y[j]=nun;
+			}}}
+	for(var i=0;i<5;i++)
+	{
+		localStorage.setItem("topper1d",x[0]);
+		localStorage.setItem("topper2d",x[1]);
+		localStorage.setItem("topper3d",x[2]);
+		localStorage.setItem("topper4d",x[3]);
+		localStorage.setItem("topper5d",x[4]);
+		localStorage.setItem("topper1d n",y[0]);
+		localStorage.setItem("topper2d n",y[1]);
+		localStorage.setItem("topper3d n",y[2]);
+		localStorage.setItem("topper4d n",y[3]);
+		localStorage.setItem("topper5d n",y[4]);
+	}
+  if(x[0]!=null&&x[0]!="null")
+  document.getElementById("top1").innerHTML = x[0]+" - "+y[0];
+  if(x[1]!=null&&x[1]!="null")
+  document.getElementById("top2").innerHTML = x[1]+" - "+y[1];
+  if(x[2]!=null&&x[2]!="null")
+  document.getElementById("top3").innerHTML = x[2]+" - "+y[2];
+  if(x[3]!=null&&x[3]!="null")
+  document.getElementById("top4").innerHTML = x[3]+" - "+y[3];
+  if(x[4]!=null&&x[4]!="null")
+  document.getElementById("top5").innerHTML = x[4]+" - "+y[4];
+  
+
+</script>
+
+	
+</body>
+</html>
